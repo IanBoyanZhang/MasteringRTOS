@@ -50,3 +50,8 @@ int i ; /* non static variable */
 ```
 
 In the task's stack space
+
+
+STM32 
+
+RCC (Reset and Control Clock), clock tree
