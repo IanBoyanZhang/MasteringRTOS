@@ -55,3 +55,9 @@ In the task's stack space
 STM32 
 
 RCC (Reset and Control Clock), clock tree
+
+Key files:
+
+`/config/FreeRTOSConfig.h`
+
+https://www.freertos.org/a00110.html
