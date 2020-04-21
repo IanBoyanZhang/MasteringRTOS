@@ -92,7 +92,9 @@ How it is related to Context Switching and hardware resources
 [How to use semihosting with STM32](https://shawnhymel.com/1840/how-to-use-semihosting-with-stm32/)
 
 
-#### Multi-task handler Techniques 
+#### Kernel
+
+##### Multi-task handler Techniques 
 
 [Cooperative Multitasking](https://en.wikipedia.org/wiki/Cooperative_multitasking)
 
@@ -107,5 +109,42 @@ The Idle task is created automatically when the RTOS scheduler is started to ens
 It is created at the lowest priority to ensure it does not use any CPU time if there are higher priority application tasks in the ready state
 
 [Tasks Idletask](https://www.hackster.io/Niket/tasks-idletasks-freertos-tutorial-7-42126c)
+
+Some facts about idle task
+
+- It is a lowest priority task which is automatically created when the scheduler is started
+
+- The idle task is responsible for freeing memory allocated by the RTOS to tasks that have been deleted
+
+- When there are no task running, idle task will always run on the CPU
+
+- You can give an application hook function in the idle task to send the CPU to lower mode when there are no useful tasks are executing
+
+##### Idle Task hook function
+
+- Idle task hook function implements a callback from idle task to your application
+
+- You have to enable the idle task hook function feature by setting this config item `configUSE_TICK_HOOK` to 1 within FreeRTOSConfig.h
+
+- Then implement the below function in your application `void vApplicationIdleHook(void)`
+
+- Whenever idle task is allowed to run, your hook function will get called, where you can do some useful stuffs like sending the MCU to lower mode to save power
+
+
+##### Timer Services Task (Timer_svc)
+
+- This is also called as timer daemon task
+
+- The timer daemon task deals with "Software timers"
+
+- This task is created automatically when the scheduler is started and if `configUSE_TIMER = 1` in FreeRTOSConfig.h
+
+- The RTOS uses this daemon to manage FreeRTOS software timers and nothing else
+
+- If you don't use software timers in your FreeRTOS application then you need to use this Timer daemon task. For that just make `configUSE_TIMERS = 0` in FreeRTOSConfig.h
+
+- All software timer callback functions execute in the context of the time daemon task 
+
+
 
 
