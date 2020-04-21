@@ -238,3 +238,5 @@ Used for ContextSwitching to the next potential task
 Pending an interrupt also means "Activating" that interrupt
 
 PendSV is a System exception which can be triggered by enabling its pending bit in the ARM cortex Mx processor
+
+`vTaskStartScheduler()/tasks.c` -> `xPortStartScheduler()/port.c` 
