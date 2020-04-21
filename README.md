@@ -73,6 +73,8 @@ How it is related to Context Switching and hardware resources
 
 [System Timer (SysTick)](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dai0179b/ar01s02s08.html)
 
+[Significance of ARM SysTick timer vs other Timers](https://electronics.stackexchange.com/questions/350577/significance-of-arm-systick-timer-vs-other-timers)
+
 [ARM developer community, using the static keyword in c](https://community.arm.com/developer/ip-products/system/b/embedded-blog/posts/using-the-static-keyword-in-c)
 
 [Where are static variables stored in C and C++?](https://stackoverflow.com/questions/93039/where-are-static-variables-stored-in-c-and-c)
