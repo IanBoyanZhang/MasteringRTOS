@@ -84,4 +84,19 @@ How it is related to Context Switching and hardware resources
 ![Program Memory Layout](https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Program_memory_layout.pdf/page1-299px-Program_memory_layout.pdf.jpg)
 
 
+#### Debugging
+
+[Segger SemiHosting](https://wiki.segger.com/Semihosting)
+
+[How to use semihosting with STM32](https://shawnhymel.com/1840/how-to-use-semihosting-with-stm32/)
+
+
+#### Multi-task handler Techniques 
+
+[Cooperative Multitasking](https://en.wikipedia.org/wiki/Cooperative_multitasking)
+
+[What is the difference between cooperative multitasking and preemptive multitasking](https://stackoverflow.com/questions/55703365/what-is-the-difference-between-cooperative-multitasking-and-preemptive-multitask)
+
+[taskYield, FreeRTOS Kernel Control](https://www.freertos.org/a00020.html)
+
 
