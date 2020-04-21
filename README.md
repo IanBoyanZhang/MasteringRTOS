@@ -71,6 +71,8 @@ How it is related to Context Switching and hardware resources
 
 [Context switching on the Cortex M3](https://blog.stratifylabs.co/device/2013-10-09-Context-Switching-on-the-Cortex-M3/)
 
+[System Timer (SysTick)](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dai0179b/ar01s02s08.html)
+
 [ARM developer community, using the static keyword in c](https://community.arm.com/developer/ip-products/system/b/embedded-blog/posts/using-the-static-keyword-in-c)
 
 [Where are static variables stored in C and C++?](https://stackoverflow.com/questions/93039/where-are-static-variables-stored-in-c-and-c)
@@ -78,5 +80,6 @@ How it is related to Context Switching and hardware resources
 [.bss](https://en.wikipedia.org/wiki/.bss)
 
 ![Program Memory Layout](https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Program_memory_layout.pdf/page1-299px-Program_memory_layout.pdf.jpg)
+
 
 
