@@ -65,6 +65,8 @@ Key files:
 
 Main Stack Pointer (MSP) and Process Stack Pointer (PSP)
 
+[Main Stack Pointers MSP vs Process Stack Pointers PSP](https://electronics.stackexchange.com/questions/403967/main-stack-pointermsp-vs-process-stack-pointerpsp)
+
 How it is related to Context Switching and hardware resources 
 
 [Context switching on the Cortex M3](https://blog.stratifylabs.co/device/2013-10-09-Context-Switching-on-the-Cortex-M3/)
