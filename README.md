@@ -63,7 +63,9 @@ Key files:
 [Customization: https://www.freertos.org/a00110.html](https://www.freertos.org/a00110.html)
 
 
-MSP (main stack pointer) and Process Stack Pointer (PSP)
+Main Stack Pointer (MSP) and Process Stack Pointer (PSP)
+
+How it is related to Context Switching and hardware resources 
 
 [Context switching on the Cortex M3](https://blog.stratifylabs.co/device/2013-10-09-Context-Switching-on-the-Cortex-M3/)
 
