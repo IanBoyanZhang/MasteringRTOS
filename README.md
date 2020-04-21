@@ -60,4 +60,19 @@ Key files:
 
 `/config/FreeRTOSConfig.h`
 
-https://www.freertos.org/a00110.html
+[Customization: https://www.freertos.org/a00110.html](https://www.freertos.org/a00110.html)
+
+
+MSP (main stack pointer) and Process Stack Pointer (PSP)
+
+[Context switching on the Cortex M3](https://blog.stratifylabs.co/device/2013-10-09-Context-Switching-on-the-Cortex-M3/)
+
+[ARM developer community, using the static keyword in c](https://community.arm.com/developer/ip-products/system/b/embedded-blog/posts/using-the-static-keyword-in-c)
+
+[Where are static variables stored in C and C++?](https://stackoverflow.com/questions/93039/where-are-static-variables-stored-in-c-and-c)
+
+[.bss](https://en.wikipedia.org/wiki/.bss)
+
+![Program Memory Layout](https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Program_memory_layout.pdf/page1-299px-Program_memory_layout.pdf.jpg)
+
+
