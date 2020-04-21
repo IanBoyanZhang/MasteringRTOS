@@ -221,3 +221,20 @@ All interrupts are configured at the lowest interrupt priority possible
 - RTOS ticking is implemented using SysTick Timer of the ARM Cortex Mx
 
 - Tick interrupt happens at the rate of `configTICK_RATE_HZ` configured in the FreeRTOSConfig.h
+
+Used for ContextSwitching to the next potential task
+
+- The tick ISR runs
+
+- All the ready state tasks are scanned
+
+- Determined which is the next potential task to run
+
+- If found, triggers the context switching by pending the PendSV interrupt
+
+- The PendSV handler takes care of switching out of old task and switching in of a new task
+
+
+Pending an interrupt also means "Activating" that interrupt
+
+PendSV is a System exception which can be triggered by enabling its pending bit in the ARM cortex Mx processor
