@@ -1,10 +1,11 @@
 # MasteringRTOS
 Running FreeRTOS on Arduino, STM32F4x and Cortex M based MCUs
 
-
 # Notes:
 
 Concepts of task and task control block(TCB)
+
+[FreeRTOS Documentation](https://www.freertos.org/Documentation/RTOS_book.html)
 
 [FreeRTOS introduction](https://www.aosabook.org/en/freertos.html)
 
@@ -98,5 +99,13 @@ How it is related to Context Switching and hardware resources
 [What is the difference between cooperative multitasking and preemptive multitasking](https://stackoverflow.com/questions/55703365/what-is-the-difference-between-cooperative-multitasking-and-preemptive-multitask)
 
 [taskYield, FreeRTOS Kernel Control](https://www.freertos.org/a00020.html)
+
+[RTOS idle task](https://www.freertos.org/RTOS-idle-task.html)
+
+The Idle task is created automatically when the RTOS scheduler is started to ensure there is always at least one task that is able to run.
+
+It is created at the lowest priority to ensure it does not use any CPU time if there are higher priority application tasks in the ready state
+
+[Tasks Idletask](https://www.hackster.io/Niket/tasks-idletasks-freertos-tutorial-7-42126c)
 
 
