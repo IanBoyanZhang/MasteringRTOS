@@ -146,5 +146,78 @@ Some facts about idle task
 - All software timer callback functions execute in the context of the time daemon task 
 
 
+##### Scheduler
+
+- Implements task switching in and task switching out according to the scheduling policy selected
+
+- Scheduler is the reason why multiple tasks run on your system efficiently
+
+- The basic job of the scheduler is to determine which is the next potential task to run on the CPU
+
+- Scheduler has the ability to preempt a running task if you configure so
+
+##### Scheduling Policies (Scheduler Types)
+
+- Simple Pre-emptive scheduling (Round robin)
+
+- Priority based pre-emptive scheduling
+
+- Co-operative scheduling
+
+The scheduling policy is the algorithm used by the scheduler to decide which task to execute at any point in time
+
+FreeRTOS or most of the real time OS most likely woud be using `Priority Based` `Pre-emptive Scheduling` by default
 
 
+##### FreeRTOS scheduler implementation
+
+In FreeRTOS the scheduler code is actually combination of FreeRTOS Generic code + Architecture specfic codes
+
+FreeRTOS Generic Code in `tasks.c`
+
+Arch. Specific codes for `port.c`
+
+All architecture specific codes and configurations are implemented in `port.c` and `portmacro.h`
+
+If you are using ARM Cortex Mx processor then you should be able to locate the below interrupt handlers in `port.c` which are part of the scheduler implementation of FreeRTOS
+
+`vPortSVHandler()` Used to launch the very first task. Triggered by SVC instruction
+
+`xPortPendSVHandler()` Used to achieve the context switchin between tasks. Triggered by pending the PendSV system exception of ARM
+
+`xPortSysTickHandler()` This implements the RTOS Tick management. Triggered periodically by Systick timer of ARM cortex Mx processor
+
+`vTaskStartScheduler()` implemented in `tasks.c` of FreeRTOS kernel and used to start the RTOS scheduler
+
+Remember that after calling this function only the scheduler code is initialized and all the Arch. Specific interrupts will activated
+
+- This function also creates the idle and Timer daemon task
+
+- This function calls `xPortStartScheduler()` to do the Arch. specific initializations
+
+##### FreeRTOS Kernel interrupts
+
+When FreeRTOS runs on ARM cortex Mx processor based MCU, below interrupts are used to implement the Scheduling of Tasks
+
+- 1. SVCInterrupt (SVC handler will be used to launch the very first Task)
+
+- 2. PendSVInterrupt (PendSV handler is used to carry out context switching between tasks)
+
+- 3. SysTick interrupt (SysTick handler implements the RTOS Tick Management)
+
+If SysTick interrupt is used for some other purpose in your application, then you may use any other available timer peripheral
+
+All interrupts are configured at the lowest interrupt priority possible
+
+
+#### RTOS Tick (The heart beat)
+
+##### Why is it needed?
+
+- To keep track of time elapsed
+
+- There is a global variable called `xTickCount` and it is incremented by one whenever tick interrupt occurs
+
+- RTOS ticking is implemented using SysTick Timer of the ARM Cortex Mx
+
+- Tick interrupt happens at the rate of `configTICK_RATE_HZ` configured in the FreeRTOSConfig.h
