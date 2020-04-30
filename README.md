@@ -240,3 +240,24 @@ Pending an interrupt also means "Activating" that interrupt
 PendSV is a System exception which can be triggered by enabling its pending bit in the ARM cortex Mx processor
 
 `vTaskStartScheduler()/tasks.c` -> `xPortStartScheduler()/port.c` 
+
+
+#### Context Switching
+
+If the scheduler is priority based pre-emptive scheduler, the n for every RTOS tick interrupt, the scheduler will compare the priority of the running task with the priority of ready tasks list. If there is any ready task whose priority is higher than the running task then context switch will occur.
+
+On FreeRTOS you can also trigger context switch manually using `taskYIELD()` macro
+
+Context switch also happens immediately whenever new task unblocks and if its priority is higher than the currently running task. 
+
+##### Task State
+
+When a task executes on the processor it utilizes
+
+- Processor core registers
+
+- If a Task wants to do any push and pop operations (during function call) then it uses its own dedicated stack memory.
+
+Contents of the processor core registers + Stack contents ==> state of the task
+
+[ARM Cortex Core Registers](https://developer.arm.com/docs/dui0553/latest/the-cortex-m4-processor/programmers-model/core-registers)
