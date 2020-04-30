@@ -281,3 +281,7 @@ Before task is switched out, following things have be taken care of:
 - If context switch is required then SysTick timer will pend the PendSV Exception and PendSV handler runs
 
 - Processor core registers (R4-R11, R14) have to be saved manually on the task's private stack memory (Saving the context)
+
+- Save the new top of stack value (PSP) into first member of the TCB
+
+- Select the next potential Task to execute on the CPU. Taken care by vTaskSwitchContext() implemented in tasks.c
