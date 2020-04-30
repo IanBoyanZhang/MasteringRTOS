@@ -261,3 +261,23 @@ When a task executes on the processor it utilizes
 Contents of the processor core registers + Stack contents ==> state of the task
 
 [ARM Cortex Core Registers](https://developer.arm.com/docs/dui0553/latest/the-cortex-m4-processor/programmers-model/core-registers)
+
+##### Stacks
+
+There are mainly 2 different Stack Memories during run time of FreeRTOS based application
+
+Task's private stack (Process Stack) vs Kernel Stack (Main Stack)
+
+SP (PSP) => PUSH and POP to Process Stack area is tracked by PSP register of ARM (When Task executes it does push/pop here)
+
+SP (MSP) => PUSH and POP to this stack area is tracked by MSP Register of ARM (When ISR executes it does push/pop here)
+
+##### Task Swiching out and in procedures
+
+Before task is switched out, following things have be taken care of:
+
+- Processor core registers R0, R1, R2, R3, R12, LR, PC, xPSR(stack frame) are saved on to the task's private stack automatically by the processor SysTick interrupt entry sequence.
+
+- If context switch is required then SysTick timer will pend the PendSV Exception and PendSV handler runs
+
+- Processor core registers (R4-R11, R14) have to be saved manually on the task's private stack memory (Saving the context)
