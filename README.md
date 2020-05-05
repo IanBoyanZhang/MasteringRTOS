@@ -297,4 +297,4 @@ Common kernel code -> calling `port.c`?
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
 
-
+[Using the FreeRTOS Real Time Kernel](https://www.freertos.org/Documentation/Using-the-FreeRTOS-Real-Time-Kernel-A-Practical-Guide-LPC17xx-Edition-Document-Outline.pdf)
