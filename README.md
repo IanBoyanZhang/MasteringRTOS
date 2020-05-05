@@ -293,4 +293,8 @@ Before task is switched out, following things have be taken care of:
 Common kernel code -> calling `port.c`? 
 
 
+## References
+
+[FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
+
 
