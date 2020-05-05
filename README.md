@@ -285,3 +285,12 @@ Before task is switched out, following things have be taken care of:
 - Save the new top of stack value (PSP) into first member of the TCB
 
 - Select the next potential Task to execute on the CPU. Taken care by vTaskSwitchContext() implemented in tasks.c
+
+
+
+## Source Code reading and Concepts
+
+Common kernel code -> calling `port.c`? 
+
+
+
