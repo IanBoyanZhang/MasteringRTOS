@@ -396,6 +396,16 @@ The only way for a task to come out of the suspended state is , some other task 
 Its a responsibility of the ISR to call for task yield if higher priority task unblocks
 
 
+**FreeRTOS Hook Functions**
+
+- Idle task hook function
+- RTOS tick hook function
+- Dynamic memory allocation failed hook function (Malloc Failed hook function)
+- Stack overflow hook function
+
+
+
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
