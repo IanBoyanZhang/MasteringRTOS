@@ -381,6 +381,20 @@ A task which is temporarily or permanently chosen not to run on CPU
 
 Blocking is common technique for synchronization
 
+**can we block the task indefinitely in FreeRTOS ?**
+
+if you use vTaskDelay(portMAX_DELAY) the task will be blocked indefinitely . So, the parameter portMAX_DELAY causes the task to block indefinitely
+
+**Can a suspended state task come out of suspended state by any external event or due to timeout ?**
+
+No!
+
+The only way for a task to come out of the suspended state is , some other task should call vTaskResume() with the handle of the suspended task
+
+**If interrupt handler unblocks any higher priority task, then when ISR returns, will execution resume at the higher priority task which is unblocked or execution will resume at the task which was interrupted?**
+
+Its a responsibility of the ISR to call for task yield if higher priority task unblocks
+
 
 ## References
 
