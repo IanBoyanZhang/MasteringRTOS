@@ -435,6 +435,15 @@ It is always a good strategy to check why certain interrupt is happening, trigge
 
 ## Timer Queue
 
+## Solving race condition between task and ISR
+
+taskENTER_CRITICAL()
+
+taskEXIT_CRITICAL()
+
+Related ARM hardware, base register
+
+In RTOS, we should avoid using dynamic allocation as much as possible
 
 
 ## References
