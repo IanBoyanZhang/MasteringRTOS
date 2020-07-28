@@ -446,6 +446,16 @@ Related ARM hardware, base register
 In RTOS, we should avoid using dynamic allocation as much as possible
 
 
+## Concurrency and Synchronization
+
+If a task can acquire the key(semaphore), then only it can carry out the intended operation
+
+Task-waiting list
+
+If a task fails to get the key, then that task will be blocked and kernel will put that task into task waiting list.
+
+That means tasks state will be changed from "Running" to "Blocked"!
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
