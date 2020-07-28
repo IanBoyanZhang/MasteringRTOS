@@ -292,6 +292,10 @@ Before task is switched out, following things have be taken care of:
 Common kernel code -> calling `port.c`? 
 
 
+Some bullet points regarding preemptive vs non-preemptive scheduling
+
+[CPU Scheduling](http://www.personal.kent.edu/~rmuhamma/OpSystems/Myos/cpuScheduling.htm)
+
 
 ## Concurrency
 
@@ -329,6 +333,12 @@ e.g.
 etc
 
 ### Why separate interrupt Safe APIs?
+
+handler mode vs thread mode
+
+[Are exceptions stacked by the cortex m hardware in thread mode or handler mode](https://stackoverflow.com/questions/38269360/are-exceptions-stacked-by-the-cortex-m-hardware-in-thread-mode-or-handler-mode)
+
+[Why do we need two priviledged modes can't one do the thing in cortex m3?](https://community.arm.com/developer/ip-products/processors/f/cortex-a-forum/7420/why-do-we-need-two-priviledged-modes-cant-one-do-the-thing-in-cortex-m3)
 
 ## References
 
