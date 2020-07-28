@@ -456,6 +456,14 @@ If a task fails to get the key, then that task will be blocked and kernel will p
 
 That means tasks state will be changed from "Running" to "Blocked"!
 
+A single semaphore can be acquired, finite number of times by the tasks depending upon, how you first initialize the semaphore.
+
+If value=4 then 4 semaphore keys or tokens are currently available!
+
+If a task tries to acquire the key for the 5th time, then it wil be blocked.
+
+This value decrease when the key is acquired and it increases when the semaphore token or key is given back.
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
