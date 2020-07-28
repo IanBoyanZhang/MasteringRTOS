@@ -318,7 +318,7 @@ All these software subsystems support signaling hence can be used in synchroniza
 
 FreeRTOS APIs which don't end with the word "FromISR" are called as interrupt unsafe APIs
 
-**These APIs should not be called from an ISR
+**These APIs should not be called from an ISR **
 
 e.g.
 
@@ -327,6 +327,8 @@ e.g.
 - xQueueReceive()
 
 etc
+
+### Why separate interrupt Safe APIs?
 
 ## References
 
