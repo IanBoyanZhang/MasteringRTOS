@@ -313,6 +313,21 @@ Common kernel code -> calling `port.c`?
 
 All these software subsystems support signaling hence can be used in synchronization purpose
 
+
+## Interrupt Safe APIs and Task Yielding
+
+FreeRTOS APIs which don't end with the word "FromISR" are called as interrupt unsafe APIs
+
+**These APIs should not be called from an ISR
+
+e.g.
+
+- xTaskCreate()
+- xQueueSend()
+- xQueueReceive()
+
+etc
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
