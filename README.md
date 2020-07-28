@@ -464,6 +464,15 @@ If a task tries to acquire the key for the 5th time, then it wil be blocked.
 
 This value decrease when the key is acquired and it increases when the semaphore token or key is given back.
 
+- Binary Semaphore
+
+  1. Synchronization between tasks or synchronization between interrupts and tasks
+  
+  2. Mutual Exclusion Binary semaphore can also be used for Mutual exclusion to guard the critical section
+  
+  
+- Counting Semaphore
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
