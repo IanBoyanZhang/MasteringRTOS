@@ -351,6 +351,8 @@ In ARM cortex M based processors usage exception will be raised by the processor
 
 **The task yielding in FreeRTOS on ARM cortex M processor is nothing but just pending the PendSV exception **
 
+**Triggering of task yielding is always architecture specific. In ARM cortex M processor architecture task yielding (i.e. context switch to potential task is triggered by pending the PendSV Exception**
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
