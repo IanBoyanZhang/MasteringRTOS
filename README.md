@@ -429,6 +429,10 @@ Co-operative among different tasks
 
 (Task decides when to leave the CPU?, taskYield(), equaly priority, not for RTOS)
 
+## 
+
+It is always a good strategy to check why certain interrupt is happening, triggered.
+
 
 ## References
 
