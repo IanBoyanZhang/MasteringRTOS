@@ -311,6 +311,7 @@ Common kernel code -> calling `port.c`?
 
 - Mutex
 
+All these software subsystems support signaling hence can be used in synchronization purpose
 
 ## References
 
