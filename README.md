@@ -340,6 +340,14 @@ handler mode vs thread mode
 
 [Why do we need two priviledged modes can't one do the thing in cortex m3?](https://community.arm.com/developer/ip-products/processors/f/cortex-a-forum/7420/why-do-we-need-two-priviledged-modes-cant-one-do-the-thing-in-cortex-m3)
 
+### Interrupt Safe APIs: Conclusion
+
+Whenever you want to use FreeRTOS api from an ISR its ISR version must be used, which ends with the word "FromISR"
+
+This is for the reason, being in the interrupt Context (i.e. being in the middle of servicing the ISR) you can not return to Task Context (i.e. making a task to run by pre-empting the ISR)
+
+In ARM cortex M based processors usage exception will be raised by the processor if you return to the task context by preempting ISR
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
