@@ -353,6 +353,35 @@ In ARM cortex M based processors usage exception will be raised by the processor
 
 **Triggering of task yielding is always architecture specific. In ARM cortex M processor architecture task yielding (i.e. context switch to potential task is triggered by pending the PendSV Exception**
 
+
+**Is it allowed to use semaphore or mutex inside the ISR?**
+
+Yes ! you can call the semaphore and mutex related APIs from the ISR. But the only condition is you cannot block on the semaphore or mutex. Thats the reason, in FreeRTOS you don't find blocking time parameter in the semaphore take and give apis. Please explore xSemaphoreTakeFromISR(), xSemaphoreGiveFromISR()
+
+**Can I use PendSV in AVR and MSP430 architecture to implement task yielding ?**
+
+No!
+
+PendSV is an exception which is ARM Cortex M processor specific, so you can not trigger PendSV in MSP or AVR architecture.
+
+## Task States
+
+Running states vs Not-Running State
+
+Not running state:
+
+create task -> suspended -> Running
+            -> ready
+            -> blocked
+            
+What is blocking of a Task?
+
+A task which is temporarily or permanently chosen not to run on CPU
+
+
+Blocking is common technique for synchronization
+
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
