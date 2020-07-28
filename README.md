@@ -473,6 +473,10 @@ This value decrease when the key is acquired and it increases when the semaphore
   
 - Counting Semaphore
 
+  Resource management, count value indicates the number of resources available. To obtain control of a resource task must first obtain a semaphore by decrementing the semaphores count value.
+  
+  When the count value reaches zero there are no free resources. When a task finishes with the resource it 'gives' the semaphore back thus incrementing semaphores count value
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
