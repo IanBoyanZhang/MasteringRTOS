@@ -405,6 +405,26 @@ Its a responsibility of the ISR to call for task yield if higher priority task u
 
 
 
+WFI Wait For Interrupt
+
+It is a 16 bit thumb instruction
+
+## Scheduling policies
+
+1. Preemptive Scheduling
+
+2. Priority based preemptive scheduling (mostly commonly used in RTOS)
+
+3. Co-operative scheduling
+
+
+Preemption is the act of temporarily interrupting an already executing task with the intention of removing it from the runing state without its co-operation
+
+
+Tasks yielding, pendSV exception
+
+
+
 
 ## References
 
