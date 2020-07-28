@@ -287,10 +287,29 @@ Before task is switched out, following things have be taken care of:
 - Select the next potential Task to execute on the CPU. Taken care by vTaskSwitchContext() implemented in tasks.c
 
 
-
 ## Source Code reading and Concepts
 
 Common kernel code -> calling `port.c`? 
+
+
+
+## Concurrency
+
+### How to achieve signaling
+
+- Events (or Event Flags)
+
+- Semaphores (Counting and binary)
+
+- Queues and Message Queues 
+
+- Pipes
+
+- Mailboxes
+
+- Signals (Unix like signals)
+
+- Mutex
 
 
 ## References
