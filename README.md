@@ -423,7 +423,11 @@ Preemption is the act of temporarily interrupting an already executing task with
 
 Tasks yielding, pendSV exception
 
+Co-operative scheduling
 
+Co-operative among different tasks
+
+(Task decides when to leave the CPU?, taskYield(), equaly priority, not for RTOS)
 
 
 ## References
