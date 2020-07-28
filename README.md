@@ -348,6 +348,9 @@ This is for the reason, being in the interrupt Context (i.e. being in the middle
 
 In ARM cortex M based processors usage exception will be raised by the processor if you return to the task context by preempting ISR
 
+
+**The task yielding in FreeRTOS on ARM cortex M processor is nothing but just pending the PendSV exception **
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
