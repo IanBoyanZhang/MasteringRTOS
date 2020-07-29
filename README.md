@@ -492,6 +492,33 @@ Counting semaphore can be used to latch multiple events
 P/V acquire/release
 
 
+```
+#define UART_DR   *((unsigned long*)(0x40000000))
+
+/* This is a common function which write to UART DR */
+int UART_Write(uint32_t len, uint8_t *buffer)
+{
+  for (uint32_t i = 0; i < len; i++)
+  {
+    sema_take_key(bin_sema);
+    /* if Data register is empty write it*/
+    while(!is_DR_empty()) {}
+    // Critical Section
+    UART_DR = buffer[i];
+  }
+}
+
+```
+Actual example, use
+```
+xSemaphoreTake(xBinarySemaphore, portVMax_DELAY);
+```
+for spinlock, use
+
+```
+xSemaphoreTake(xBinarySemaphore, 0)
+```
+It will keep polling for the semaphore until it is available
 
 ## References
 
