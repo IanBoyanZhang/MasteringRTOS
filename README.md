@@ -520,6 +520,25 @@ xSemaphoreTake(xBinarySemaphore, 0)
 ```
 It will keep polling for the semaphore until it is available
 
+**Do not use binary semaphore for mutual exclusion**
+
+A higher priority task dependant on the lower priority task (Priority inversion)
+
+## Advantage of Mutex over Binary Semaphore
+
+- Priority Inheritance
+
+mutexes and binary semaphores are very similar the only major difference is mutexes automatically provide a basic 'priority inheritance' mechanism
+
+Priority inheritance is a technique by which mutex minimizes the negative effects of inversion. Mutex can not fix the priority inversion problem completely but it surely lessen its impact
+
+Lower priority task acquires the priority that means inherits the priority of highest priority task executes and releases the key, then it comes back to medium priority task
+
+Most of the RTOS including FreeRTOS mutex implementation implements priority inheritance feature.
+
+Since mutex has all these features to avoid priority inversion, the memory consumed by mutex service may be higher than the binary semaphore
+
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
