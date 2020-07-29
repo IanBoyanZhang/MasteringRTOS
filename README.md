@@ -477,6 +477,15 @@ This value decrease when the key is acquired and it increases when the semaphore
   
   When the count value reaches zero there are no free resources. When a task finishes with the resource it 'gives' the semaphore back thus incrementing semaphores count value
 
+## Events Latching
+
+1. When the interrupts/events happen relatively slow, the binary semaphore can latch at most only one event
+
+2. If multiple interrupts/events trigger back to back, then the binary semaphore will not able to latch all the events. So some events will be lost
+
+3. How to solve the above issue? Welcome to the world of "counting semaphore"
+
+
 ## References
 
 [FreeRTOS source code reading notes (CHN)](https://my.oschina.net/u/3699634/blog/1544909)
