@@ -538,6 +538,22 @@ Most of the RTOS including FreeRTOS mutex implementation implements priority inh
 
 Since mutex has all these features to avoid priority inversion, the memory consumed by mutex service may be higher than the binary semaphore
 
+## Ways to protect the critical section
+
+1. Binary semaphore
+
+2. Mutex
+
+3. Crude way (disabling interrupts of the system, either globally, or up to a specific interrupt priority level)
+
+Disable/enable the interrupt
+```
+taskENTER_CRITICAL()
+taskEXIT_CRITICAL()
+```
+
+Architecture dependent
+
 
 ## References
 
