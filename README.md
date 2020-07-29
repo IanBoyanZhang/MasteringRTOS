@@ -485,6 +485,13 @@ This value decrease when the key is acquired and it increases when the semaphore
 
 3. How to solve the above issue? Welcome to the world of "counting semaphore"
 
+### Counting semaphore
+
+Counting semaphore can be used to latch multiple events
+
+P/V acquire/release
+
+
 
 ## References
 
