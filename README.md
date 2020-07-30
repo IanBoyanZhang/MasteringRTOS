@@ -581,6 +581,12 @@ Virtual memory, LRU cache, TLB (Translation Lookaside Table) and page table
 This is a good study guide
 [Operating System study guide](http://faculty.salina.k-state.edu/tim/ossg/index.html)
 
+Really good for learning Linux scheduling
+[CSCI 560 Project Main](https://www.cs.montana.edu/~chandrima.sarkar/AdvancedOS/CSCI560_Proj_main/)
+
+Maybe, this is an updated version of above material?
+[AdvancedOS CSCI560](https://www.cs.montana.edu/~chandrima.sarkar/AdvancedOS/main/index.html)
+
 
 **I think the question was about Prirority Scheduling**
 
