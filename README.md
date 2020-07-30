@@ -562,3 +562,21 @@ Architecture dependent
 [Using the FreeRTOS Real Time Kernel](https://www.freertos.org/Documentation/Using-the-FreeRTOS-Real-Time-Kernel-A-Practical-Guide-LPC17xx-Edition-Document-Outline.pdf)
 
 [Memory Management](https://www.freertos.org/a00111.html)
+
+
+## General OS Tutorial 
+
+What is 
+
+[Berkely cs61c Spring 20 Great Ideas in Computer Architecture (Machine Structures)
+](https://cs61c.org/su20/)
+
+Paging and Virtual memory
+
+Virtual memory, LRU cache, TLB (Translation Lookaside Table) and page table
+[Virtual Memory Overview](https://inst.eecs.berkeley.edu/~cs61c/sp14/disc/12/dis12Sol.pdf)
+
+[Page Replacement algorithm](https://en.wikipedia.org/wiki/Page_replacement_algorithm)
+
+This is a good study guide
+[Operating System study guide](http://faculty.salina.k-state.edu/tim/ossg/index.html)
