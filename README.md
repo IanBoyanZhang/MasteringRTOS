@@ -570,6 +570,8 @@ This is really good course that covers necessary part of eduction!!
 
 [CS194 Sp14 Berkeley CS194-24:	Advanced Operating Systems Structures and Implementation](https://people.eecs.berkeley.edu/~kubitron/courses/cs194-24-S14/index_lectures.html)
 
+[Linux Kernel Understanding Queudet](https://people.eecs.berkeley.edu/~kubitron/courses/cs194-24-S14/hand-outs/linuxKernelUnderstandingQueudet.pdf)
+
 What is 
 
 [Berkely cs61c Spring 20 Great Ideas in Computer Architecture (Machine Structures)
