@@ -580,3 +580,13 @@ Virtual memory, LRU cache, TLB (Translation Lookaside Table) and page table
 
 This is a good study guide
 [Operating System study guide](http://faculty.salina.k-state.edu/tim/ossg/index.html)
+
+
+## War stories
+
+[How did NASA remotely fix the code on the M](https://space.stackexchange.com/questions/9178/how-did-nasa-remotely-fix-the-code-on-the-mars-pathfinder)
+
+[Reports Mars Path Finder](http://www.cse.chalmers.se/~risat/Report_MarsPathFinder.pdf)
+
+[Mike Jones, What really happend to Mars Path Finder](http://www.cs.cornell.edu/courses/cs614/1999sp/papers/pathfinder.html)
+
