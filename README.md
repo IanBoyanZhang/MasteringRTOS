@@ -582,6 +582,10 @@ This is a good study guide
 [Operating System study guide](http://faculty.salina.k-state.edu/tim/ossg/index.html)
 
 
+**I think the question was about Prirority Scheduling**
+
+[Wiki Scheduling](https://en.wikipedia.org/wiki/Scheduling_(computing))
+
 ## War stories
 
 [How did NASA remotely fix the code on the M](https://space.stackexchange.com/questions/9178/how-did-nasa-remotely-fix-the-code-on-the-mars-pathfinder)
